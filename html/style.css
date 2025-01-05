@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Ubuntu, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #E95420 50%, #F5F6F7 50%);
+    color: #212738;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+
+  .card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    max-width: 500px;
+    padding: 2em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    margin: 1em;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    line-height: 1.6em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #E95420;
+    font-weight: bold;
+  }
+
+  .footer {
+    font-size: 0.9em;
+    margin-top: 1em;
+    color: #555;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1em;
+  }

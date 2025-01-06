@@ -9,8 +9,26 @@
 <body>
   <h1>Welcome!</h1>
   <div class="card">
-    <img src="icons/ubuntu-logo.png" alt="Ubuntu Logo" class="logo"/>
-    <p>This is Amid's Ubuntu Server</p>
+    <input 
+  placeholder="Enter a word" 
+  style="
+    width: 300px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 2px solid #4CAF50; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    outline: none;
+  "
+  onfocus="this.style.borderColor='#007BFF'; this.style.boxShadow='0 4px 6px rgba(0, 123, 255, 0.3)';" 
+  onblur="this.style.borderColor='#4CAF50'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
+/>
+
+
+
+   
+    <p>the result is : </p>
     <p class="footer">
       For documentation, visit the 
       <a href="https://help.ubuntu.com/">Ubuntu Docs</a> or the 

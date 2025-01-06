@@ -4,36 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome to My Ubuntu Server</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <div class="card">
-    <input 
-  placeholder="Enter a word" 
-  style="
-    width: 300px; 
-    padding: 10px; 
-    font-size: 16px; 
-    border: 2px solid #4CAF50; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: all 0.3s ease; 
-    outline: none;
-  "
-  onfocus="this.style.borderColor='#007BFF'; this.style.boxShadow='0 4px 6px rgba(0, 123, 255, 0.3)';" 
-  onblur="this.style.borderColor='#4CAF50'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
-/>
+  <main>
+    <h1>Welcome!</h1>
+    <div class="card">
+      <!-- The form that sends data to search.php -->
+      <form action="search.php" method="POST" class="search-form" aria-label="Word Search Form">
+        <label for="word" class="visually-hidden">Enter a word</label>
+        <input 
+          type="text"
+          id="word"
+          name="word"
+          placeholder="Enter a word"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
 
-
-
-   
-    <p>the result is : </p>
-    <p class="footer">
-      For documentation, visit the 
-      <a href="https://help.ubuntu.com/">Ubuntu Docs</a> or the 
-      <a href="https://httpd.apache.org/docs/">Apache HTTP Server Docs</a>.
-    </p>
-  </div>
+      <p class="footer">
+        For documentation, visit the 
+        <a href="https://help.ubuntu.com/" target="_blank" rel="noopener noreferrer">Ubuntu Docs</a> or the 
+        <a href="https://httpd.apache.org/docs/" target="_blank" rel="noopener noreferrer">Apache HTTP Server Docs</a>.
+      </p>
+    </div>
+  </main>
 </body>
 </html>

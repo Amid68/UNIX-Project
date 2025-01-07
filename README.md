@@ -18,3 +18,16 @@ every team member should upload the code he/she is responsible for.
 job should compile your code, run it, and deploy it to a container.
 7. Prepare a script that automates the steps (4-6) once you modify the application
 code.
+
+The following figure depicts the components of your project:
+
+![Project Components](./figure1.png)
+
+## Submission
+1. Submit your code via Moodle within the deadline stated above.
+2. You can work as teams in this project. Each team is up to 3 students.
+3. After submission, you are required to discuss your project.
+4. This project weighs 30% from your final mark in this course.
+5. Any submission without discussing your work will not be evaluated.
+6. Any cheating will cause you to get zero in the project according to university
+regulations.

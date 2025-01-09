@@ -6,9 +6,9 @@ error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection parameters
-    $servername = "localhost"; 
+    $servername = "192.168.64.13";  // Ubuntu server's IP
     $username = "root";
-    $password = "password";
+    $password = "password"; 
     $dbname = "dictionary";
 
     // Create a new MySQLi instance

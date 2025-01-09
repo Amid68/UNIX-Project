@@ -4,25 +4,21 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database connection parameters
-    $servername = "localhost";
-    $username = "root";
-    $password = "password"; // Consider using environment variables for sensitive data
-    $dbname = "dictionary";
+    $servername = getenv('MYSQL_HOST') ?: 'localhost';
+    $username = getenv('MYSQL_USER') ?: 'root';
+    $password = getenv('MYSQL_PASSWORD') ?: 'password';
+    $dbname = getenv('MYSQL_DATABASE') ?: 'dictionary';
 
     // Create a new MySQLi instance
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     // Check the connection
     if ($conn->connect_error) {
-        // Log the error and show a generic message to the user
         error_log("Connection failed: " . $conn->connect_error);
         die("Sorry, we're experiencing technical difficulties. Please try again later.");
     }
 
-    // Prepare and bind the SQL statement
     $stmt = $conn->prepare("SELECT meaning FROM words WHERE word = ?");
     if ($stmt) {
         $stmt->bind_param("s", $_POST['word']);
@@ -31,15 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->fetch();
         $stmt->close();
     } else {
-        // Log the error and show a generic message to the user
         error_log("Prepare failed: " . $conn->error);
         die("Sorry, we're experiencing technical difficulties. Please try again later.");
     }
 
-    // Close the connection
     $conn->close();
 } else {
-    // Redirect to the index page if accessed directly
     header("Location: index.html");
     exit();
 }

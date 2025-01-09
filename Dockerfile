@@ -1,9 +1,9 @@
 FROM php:8.2-apache
 
-# Install MySQL and other dependencies
+# Install MySQL client and PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Copy application files from html directory to Apache's web root
+# Copy application files
 COPY html/ /var/www/html/
 
 # Set permissions

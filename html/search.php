@@ -5,10 +5,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = getenv('MYSQL_HOST') ?: 'localhost';
-    $username = getenv('MYSQL_USER') ?: 'root';
-    $password = getenv('MYSQL_PASSWORD') ?: 'password';
-    $dbname = getenv('MYSQL_DATABASE') ?: 'dictionary';
+    // Database connection parameters
+    $servername = "host.docker.internal"; 
+    $username = "root";
+    $password = "password";
+    $dbname = "dictionary";
 
     // Create a new MySQLi instance
     $conn = new mysqli($servername, $username, $password, $dbname);

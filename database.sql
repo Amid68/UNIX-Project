@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS words (
     meaning TEXT NOT NULL
 );
 
--- Insert your existing data
 INSERT INTO words (word, meaning) VALUES 
 ('apple', 'A fruit'),
 ('book', 'A collection of pages'),

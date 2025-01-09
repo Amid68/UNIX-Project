@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection parameters
-    $servername = "172.17.0.1"; 
+    $servername = "localhost"; 
     $username = "root";
     $password = "password";
     $dbname = "dictionary";

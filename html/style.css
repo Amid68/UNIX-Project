@@ -2,10 +2,6 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', Verdana, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: linear-gradient(135deg, #E95420 50%, #F5F6F7 50%);
   color: #212738;
@@ -14,14 +10,13 @@ body {
 
 main {
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1em;
-}
-
-h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
-  color: #FFFFFF;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-sizing: border-box;
 }
 
 .card {
@@ -31,7 +26,14 @@ h1 {
   width: 100%;
   padding: 2em;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  margin: 1em;
+  margin: 0 auto; /* Changed from margin: 1em */
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #FFFFFF;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 p {

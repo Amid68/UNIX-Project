@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Pull latest code
-git pull
+# git pull
 
 # Build Docker image
 docker build -t dictionary-app .

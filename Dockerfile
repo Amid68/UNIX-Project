@@ -11,3 +11,7 @@ COPY html/ /var/www/html/
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/
+
+# Modify your Dockerfile to change ports.conf and 000-default.conf
+RUN sed -i 's/Listen 8000/Listen 80/g' /etc/apache2/ports.conf
+RUN sed -i 's/*:8000/*:80/g' /etc/apache2/sites-available/000-default.conf

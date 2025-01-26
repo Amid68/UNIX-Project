@@ -1,9 +1,4 @@
-# UNIX Project
-Ameed Othman 12220692
-
-Mosa Hammouz 12218848
-
-## Problem
+# CI/CD Dictionary Automation
 The purpose of this project is to automate the software development process via building a comprehensive software development and deployment process. The following summarizes the required flow of tasks:
 
 1. Create an application server (virtual machine or container).
